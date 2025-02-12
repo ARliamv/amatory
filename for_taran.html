@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+  <link rel="stylesheet" href="styles/for_taran.css">
+  <title>Amatory</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #7e0315;
+      font-family: 'Concert One', cursive;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #640000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      z-index: 1;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="letter">
+      <h1>You are the most amazing person I have ever met, and I feel so proud to call you my boyfriend.I don't know how I got so lucky to have you in my life, but I promise to cherish every moment we share together.<br>Happy Valentine's Day,my one and only >ᴗ< ₊˚♡<br></h1>
+    </div>
+    <div class="rose">
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+      </div>
+      <div class="leaf">
+        <div class="stem"></div>
+        <div class="leafs"></div>
+        <div class="leafs"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Made with love by Htet</p>
+  </footer>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.top = Math.random() * 100 + 'vh';
+      sparkle.style.animationDuration = Math.random() * 2 + 1 + 's';
+      sparkle.style.opacity = Math.random() * 0.5 + 0.5;
+
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 3000);
+    }
+
+    setInterval(createHeart, 300);
+    setInterval(createSparkle, 200);
+  </script>
+</body>
+</html>
